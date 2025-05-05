@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.059);
+    color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    height: 150px;
+    width: 150px;
+    font-size: large;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    display: block;
+    font-weight: bold;
+  }
+  
+  nav ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  /* Dropdown */
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* background-color: #fff; */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex-direction: column;
+    min-width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-menu a {
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Show dropdown when active */
+  li:hover > .dropdown-menu {
+    display: flex;
+  }
+  
+  /* Mobile Toggle Button */
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      display: none;
+      padding: 10px 0;
+    }
+  
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  

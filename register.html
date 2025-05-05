@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="description" content="This is a sample page">
+<style>.project-form {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+}
+
+/* Form Heading */
+.project-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+label {
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+input:focus, select:focus, textarea:focus {
+    background: white;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+}
+
+/* Textarea Resizing */
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit Button */
+button {
+    background: #ff6f61;
+    color: white;
+    font-size: 18px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #ff3b2e;
+    transform: scale(1.05);
+}
+
+/* Confirmation Message */
+#confirmationMessage {
+    color: #ffeb3b;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .project-form {
+        padding: 30px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+<body>
+    <section class="project-form">
+        <h2>Order Your Project</h2>
+        <form id="projectOrderForm" action="https://formspree.io/f/mgvkkvrg"
+        method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+            </select>
+            
+            <label for="title">Project Title:</label>
+            <input type="text" id="title" name="title" required >
+            
+            <button type="submit">Submit</button>
+        </form>
+        <p id="confirmationMessage" style="display: none;">"Our team will review your request and contact you soon."</p>
+    </section>
+</body>
+</html>
